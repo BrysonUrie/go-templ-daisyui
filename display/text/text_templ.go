@@ -81,7 +81,7 @@ const (
 // https://tailwindcss.com/docs/text-overflow
 type Overflow = components.Class
 
-func (text *Props) template() templ.Component {
+func (text *Props) Template() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -145,7 +145,7 @@ func (text *Props) template() templ.Component {
 }
 
 func (text *Props) Render(ctx context.Context, w io.Writer) error {
-	return text.template().Render(ctx, w)
+	return text.Template().Render(ctx, w)
 }
 
 var _ = templruntime.GeneratedTemplate

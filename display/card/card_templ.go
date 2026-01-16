@@ -54,11 +54,11 @@ const (
 type Size = components.Class
 
 func (card *Props) Render(ctx context.Context, w io.Writer) error {
-	return card.template().Render(ctx, w)
+	return card.Template().Render(ctx, w)
 }
 
 // Show will display a Card with the given options.
-func (card *Props) template() templ.Component {
+func (card *Props) Template() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -122,10 +122,10 @@ func (card *Props) template() templ.Component {
 }
 
 func (card *BodyProps) Render(ctx context.Context, w io.Writer) error {
-	return card.template().Render(ctx, w)
+	return card.Template().Render(ctx, w)
 }
 
-func (body *BodyProps) template() templ.Component {
+func (body *BodyProps) Template() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {

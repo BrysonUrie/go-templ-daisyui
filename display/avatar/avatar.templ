@@ -25,7 +25,7 @@ const (
 // Presence sets a presence indicator for the avatar.
 type Presence = components.Class
 
-templ (avatar *Props) template() {
+templ (avatar *Props) Template() {
 	<div class={ "avatar", avatar.presence.Show(), templ.KV(Placeholder.String(),avatar.placeholder) }>
 		<div class={ avatar.classes.Show() }>
 			{ children... }
@@ -34,5 +34,5 @@ templ (avatar *Props) template() {
 }
 
 func (avatar *Props) Render(ctx context.Context, w io.Writer) error {
-	return avatar.template().Render(ctx, w)
+	return avatar.Template().Render(ctx, w)
 }

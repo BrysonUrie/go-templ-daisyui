@@ -58,12 +58,12 @@ const (
 type Size = components.Class
 
 // Show will display a Button with its given properties.
-templ (btn *Props) template() {
+templ (btn *Props) Template() {
 	<button class={ "btn", btn.classes.Show() } { btn.attributes.ShowAttributes()... }>
 		{ children... }
 	</button>
 }
 
 func (btn *Props) Render(ctx context.Context, w io.Writer) error {
-	return btn.template().Render(ctx, w)
+	return btn.Template().Render(ctx, w)
 }

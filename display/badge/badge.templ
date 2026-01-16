@@ -42,11 +42,11 @@ const (
 type BadgeSize = components.Class
 
 func (badge *Props) Render(ctx context.Context, w io.Writer) error {
-	return badge.template().Render(ctx, w)
+	return badge.Template().Render(ctx, w)
 }
 
 // Show will display a Card with the given options.
-templ (badge *Props) template() {
+templ (badge *Props) Template() {
 	<div class={ "badge", badge.classes.Show() } { badge.attributes.ShowAttributes()... }>
 		{ children... }
 	</div>

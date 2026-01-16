@@ -30,12 +30,12 @@ const (
 // Size defines the size of the menu.
 type Size = components.Class
 
-templ (menu *Props) template() {
+templ (menu *Props) Template() {
 	<ul class={ "menu",  menu.classes.Show() } { menu.attributes.ShowAttributes()... }>
 		{ children... }
 	</ul>
 }
 
 func (menu *Props) Render(ctx context.Context, w io.Writer) error {
-	return menu.template().Render(ctx, w)
+	return menu.Template().Render(ctx, w)
 }

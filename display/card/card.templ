@@ -45,21 +45,21 @@ const (
 type Size = components.Class
 
 func (card *Props) Render(ctx context.Context, w io.Writer) error {
-	return card.template().Render(ctx, w)
+	return card.Template().Render(ctx, w)
 }
 
 // Show will display a Card with the given options.
-templ (card *Props) template() {
+templ (card *Props) Template() {
 	<div class={ "card", card.classes.Show() } { card.attributes.ShowAttributes()... }>
 		{ children... }
 	</div>
 }
 
 func (card *BodyProps) Render(ctx context.Context, w io.Writer) error {
-	return card.template().Render(ctx, w)
+	return card.Template().Render(ctx, w)
 }
 
-templ (body *BodyProps) template() {
+templ (body *BodyProps) Template() {
 	<div class={ "card-body", body.classes.Show() } { body.attributes.ShowAttributes()... }>
 		{ children... }
 	</div>

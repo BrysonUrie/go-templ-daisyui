@@ -9,11 +9,11 @@ import (
 )
 
 // Show will render the input.
-templ (input *Props) template() {
+templ (input *Props) Template() {
 	<input class={ "input" } { input.attributes.ShowAttributes()... }/>
 }
 
 // Render will display the input with its options. Satisfies templ.Component.
 func (input *Props) Render(ctx context.Context, w io.Writer) error {
-	return input.template().Render(ctx, w)
+	return input.Template().Render(ctx, w)
 }

@@ -72,12 +72,12 @@ const (
 // https://tailwindcss.com/docs/text-overflow
 type Overflow = components.Class
 
-templ (text *Props) template() {
+templ (text *Props) Template() {
 	<p class={ text.classes.Show() } { text.attributes.ShowAttributes()... }>
 		{ children... }
 	</p>
 }
 
 func (text *Props) Render(ctx context.Context, w io.Writer) error {
-	return text.template().Render(ctx, w)
+	return text.Template().Render(ctx, w)
 }

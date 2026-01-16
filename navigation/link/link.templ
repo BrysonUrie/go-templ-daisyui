@@ -23,12 +23,12 @@ const (
 // Color defines the colour of the button.
 type Color = components.Class
 
-templ (link *Props) template() {
+templ (link *Props) Template() {
 	<a class={ "link", "link-hover", link.classes.Show() } { link.attributes.ShowAttributes()... }>
 		{ children... }
 	</a>
 }
 
 func (link *Props) Render(ctx context.Context, w io.Writer) error {
-	return link.template().Render(ctx, w)
+	return link.Template().Render(ctx, w)
 }

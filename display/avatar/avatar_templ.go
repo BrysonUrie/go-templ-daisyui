@@ -34,7 +34,7 @@ const (
 // Presence sets a presence indicator for the avatar.
 type Presence = components.Class
 
-func (avatar *Props) template() templ.Component {
+func (avatar *Props) Template() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -112,7 +112,7 @@ func (avatar *Props) template() templ.Component {
 }
 
 func (avatar *Props) Render(ctx context.Context, w io.Writer) error {
-	return avatar.template().Render(ctx, w)
+	return avatar.Template().Render(ctx, w)
 }
 
 var _ = templruntime.GeneratedTemplate

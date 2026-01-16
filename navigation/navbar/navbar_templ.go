@@ -17,7 +17,7 @@ import (
 	"io"
 )
 
-func (navbar *Props) template() templ.Component {
+func (navbar *Props) Template() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -81,7 +81,7 @@ func (navbar *Props) template() templ.Component {
 }
 
 func (navbar *Props) Render(ctx context.Context, w io.Writer) error {
-	return navbar.template().Render(ctx, w)
+	return navbar.Template().Render(ctx, w)
 }
 
 func Start() templ.Component {

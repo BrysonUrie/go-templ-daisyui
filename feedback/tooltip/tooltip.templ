@@ -39,7 +39,7 @@ const (
 type Color = components.Class
 
 // Show renders the tooltip with its given properties.
-templ (tooltip *Props) template() {
+templ (tooltip *Props) Template() {
 	<div
 		class={ "tooltip", tooltip.classes.Show() }
 		{ tooltip.attributes.ShowAttributes()... }
@@ -50,5 +50,5 @@ templ (tooltip *Props) template() {
 }
 
 func (tooltip *Props) Render(ctx context.Context, w io.Writer) error {
-	return tooltip.template().Render(ctx, w)
+	return tooltip.Template().Render(ctx, w)
 }

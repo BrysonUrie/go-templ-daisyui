@@ -21,11 +21,11 @@ const (
 type GrayScale = components.Class
 
 func (article *Props) Render(ctx context.Context, w io.Writer) error {
-	return article.template().Render(ctx, w)
+	return article.Template().Render(ctx, w)
 }
 
 // Show renders the article component.
-templ (article *Props) template() {
+templ (article *Props) Template() {
 	<article
 		class={ "prose", "dark:prose-invert", article.classes.Show() }
 		{ article.attributes.ShowAttributes()... }

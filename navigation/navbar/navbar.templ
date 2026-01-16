@@ -8,7 +8,7 @@ import (
 	"io"
 )
 
-templ (navbar *Props) template() {
+templ (navbar *Props) Template() {
 	<div
 		class={ "navbar", navbar.classes.Show() }
 		{ navbar.attributes.ShowAttributes()... }
@@ -18,7 +18,7 @@ templ (navbar *Props) template() {
 }
 
 func (navbar *Props) Render(ctx context.Context, w io.Writer) error {
-	return navbar.template().Render(ctx, w)
+	return navbar.Template().Render(ctx, w)
 }
 
 templ Start() {

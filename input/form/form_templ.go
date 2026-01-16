@@ -18,7 +18,7 @@ import (
 )
 
 // template is the form templ.Component.
-func (form *Props) template() templ.Component {
+func (form *Props) Template() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -65,7 +65,7 @@ func (form *Props) template() templ.Component {
 
 // Render will display the form with its options. Satisfies templ.Component.
 func (form *Props) Render(ctx context.Context, w io.Writer) error {
-	return form.template().Render(ctx, w)
+	return form.Template().Render(ctx, w)
 }
 
 var _ = templruntime.GeneratedTemplate

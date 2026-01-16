@@ -9,7 +9,7 @@ import (
 )
 
 // template is the form templ.Component.
-templ (form *Props) template() {
+templ (form *Props) Template() {
 	<form { form.attributes.ShowAttributes()... }>
 		{ children... }
 	</form>
@@ -17,5 +17,5 @@ templ (form *Props) template() {
 
 // Render will display the form with its options. Satisfies templ.Component.
 func (form *Props) Render(ctx context.Context, w io.Writer) error {
-	return form.template().Render(ctx, w)
+	return form.Template().Render(ctx, w)
 }

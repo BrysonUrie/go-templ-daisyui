@@ -18,7 +18,7 @@ templ (field *FieldProps) Show() {
 }
 
 // Show will display the fieldset.
-templ (fieldset *Props) template() {
+templ (fieldset *Props) Template() {
 	<fieldset class={ "fieldset", fieldset.classes.Show() } { fieldset.attributes.ShowAttributes()... }>
 		if fieldset.legend != "" {
 			<legend class="fieldset-legend">{ fieldset.legend }</legend>
@@ -28,5 +28,5 @@ templ (fieldset *Props) template() {
 }
 
 func (fieldset *Props) Render(ctx context.Context, w io.Writer) error {
-	return fieldset.template().Render(ctx, w)
+	return fieldset.Template().Render(ctx, w)
 }

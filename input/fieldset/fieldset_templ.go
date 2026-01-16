@@ -67,7 +67,7 @@ func (field *FieldProps) Show() templ.Component {
 }
 
 // Show will display the fieldset.
-func (fieldset *Props) template() templ.Component {
+func (fieldset *Props) Template() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -150,7 +150,7 @@ func (fieldset *Props) template() templ.Component {
 }
 
 func (fieldset *Props) Render(ctx context.Context, w io.Writer) error {
-	return fieldset.template().Render(ctx, w)
+	return fieldset.Template().Render(ctx, w)
 }
 
 var _ = templruntime.GeneratedTemplate

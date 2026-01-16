@@ -15,10 +15,10 @@ import (
 
 // Render will render the modal. Satisfies templ.Component.
 func (modal *Props) Render(ctx context.Context, w io.Writer) error {
-	return modal.template().Render(ctx, w)
+	return modal.Template().Render(ctx, w)
 }
 
-templ (modal *Props) template() {
+templ (modal *Props) Template() {
 	<dialog
 		class={ "modal", modal.classes.Show() }
 		_="init add @open to me end on removeModal remove me"

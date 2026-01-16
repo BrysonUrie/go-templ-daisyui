@@ -39,7 +39,7 @@ const (
 // Size defines the size of the menu.
 type Size = components.Class
 
-func (menu *Props) template() templ.Component {
+func (menu *Props) Template() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -103,7 +103,7 @@ func (menu *Props) template() templ.Component {
 }
 
 func (menu *Props) Render(ctx context.Context, w io.Writer) error {
-	return menu.template().Render(ctx, w)
+	return menu.Template().Render(ctx, w)
 }
 
 var _ = templruntime.GeneratedTemplate
