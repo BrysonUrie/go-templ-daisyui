@@ -1,4 +1,4 @@
-module github.com/joshuar/go-templ-daisyui
+module github.com/BrysonUrie/go-templ-daisyui
 
 go 1.24.5
 
