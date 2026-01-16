@@ -5,7 +5,7 @@
 !/.gitignore
 
 !*.go
-*_templ.go
+!*_templ.go
 !*.templ
 !go.sum
 !go.mod
